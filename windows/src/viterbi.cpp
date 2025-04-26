@@ -17,6 +17,12 @@
 #include "string_buffer.h"
 #include "tokenizer.h"
 
+// C++17 removed the register keyword, so we define it to nothing so that
+// it doesn't cause errors.
+#if __cplusplus >= 201703L
+#define register
+#endif
+
 namespace MeCab {
 
 namespace {

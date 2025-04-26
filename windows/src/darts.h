@@ -20,6 +20,12 @@ namespace zlib {
 #define LG(p)((unsigned long)(SH(p)) |((unsigned long)(SH((p)+2)) << 16))
 #endif
 
+// C++17 removed the register keyword, so we define it to nothing so that
+// it doesn't cause errors.
+#if __cplusplus >= 201703L
+#define register
+#endif
+
 namespace MeCab {
 
 namespace Darts {
