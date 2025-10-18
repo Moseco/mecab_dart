@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.4.1)  # for example
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-z,max-page-size=16384")
 
 add_library( mecab_dart
 
